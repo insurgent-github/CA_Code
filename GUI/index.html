@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Smart Zebra Crosswalk System</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Smart Zebra Crosswalk System</h1>
+        
+            <div class="controls">
+                <label for="crosswalkID">Crosswalk ID:</label>
+                <input type="text" id="crosswalkID" placeholder="Enter Crosswalk ID">
+
+                <div class="button-container">
+                    <button onclick="manualActivateCrosswalk()">Activate Crosswalk</button>
+                    <button onclick="manualDeactivateCrosswalk()">Deactivate Crosswalk</button>
+                </div>
+            </div>
+
+            <div class="status">
+                <h2>LED Status</h2>
+                <p id="ledStatus" class="deactivated">Inactive</p>
+            </div>
+
+
+            <div class="logs">
+                <h2>Logs and History</h2>
+                <button onclick="accessLogsAndHistory()">Access Logs</button>
+                <p id="logsResult"></p>
+            </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

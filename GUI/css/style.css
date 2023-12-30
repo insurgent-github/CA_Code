@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.controls input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.button-container button {
+    flex: 1;
+}
+
+.activated {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #388e3c;
+    border-radius: 4px;
+}
+
+.deactivated {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #d32f2f;
+    border-radius: 4px;
+}
+
+.status, .logs {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.logs button {
+    margin-top: 10px;
+}
+
+.logs p {
+    margin-top: 10px;
+}
