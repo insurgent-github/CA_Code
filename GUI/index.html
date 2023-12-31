@@ -10,41 +10,67 @@ Purpose: Distribution's Systems CA for National College Of Ireland
 
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Smart Zebra Crosswalk System</title>
-</head>
-
-<body>
-    
-    <div class="container">
-        <h1>Smart Zebra Crosswalk System</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
         
+        <!--START - This is the START of  Leaflet API integration for the MAP where the Zebra Crosswalks are -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+         crossorigin=""/>
+          <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+         crossorigin=""></script>
+        <!-- END - This is the END of  Leaflet API integration for the MAP where the Zebra Crosswalks are -->
+
+        <title>Smart Zebra Crosswalk System</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <h1>Smart Zebra Crosswalk System</h1>
+            
             <div class="controls">
-                <label for="crosswalkID">Crosswalk ID:</label>
-                <input type="text" id="crosswalkID" placeholder="Enter Crosswalk ID">
+                <label for="crosswalkId">Enter Crosswalk ID:</label>
+                <input type="text" id="crosswalkId" placeholder="Enter Crosswalk Id here please.">
 
                 <div class="button-container">
+                    <button id="showCrosswalkButton">Show Crosswalk</button>
                     <button onclick="manualActivateCrosswalk()">Activate Crosswalk</button>
                     <button onclick="manualDeactivateCrosswalk()">Deactivate Crosswalk</button>
                 </div>
             </div>
 
+
             <div class="status">
                 <h2>LED Status</h2>
-                <p id="ledStatus" class="deactivated">Inactive</p>
+                    <p id="ledStatus" class="deactivated">Inactive</p>
             </div>
 
 
             <div class="logs">
                 <h2>Logs and History</h2>
-                <button onclick="accessLogsAndHistory()">Access Logs</button>
-                <p id="logsResult"></p>
+                    <button onclick="accessLogsAndHistory()">Access Logs</button>
+                    <p id="logsResult"></p>
             </div>
-    </div>
 
-    <script src="script/script.js"></script>
-</body>
+        <!--START - This is the START of  Leaflet Map where Zebra Crosswalks are -->
+                <div class="map">
+                    <h2>Zebra Crosswalk Location</h2>
+                    <div id="map" style = "height: 200px"></div>
+                </div>
+        <!--END - This is the END of  Leaflet Map where Zebra Crosswalks are -->
+
+        </div>
+
+        <script src="script/script.js"></script>
+
+        <!--START - This is the START of the Leaflet script where Zebra Crosswalks are -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <!--END - This is the END of th Leaflet script where Zebra Crosswalks are -->
+
+    </body>
 </html>
