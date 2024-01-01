@@ -43,6 +43,6 @@ class LEDCrosswalkServiceImpl
 
 server.addService(LEDCrosswalkService, new LEDCrosswalkServiceImpl());
 
-server.bind('127.0.0.1:50052', grpc.ServerCredentials.createInsecure());
-console.log('LED Crosswalk Server running at http://127.0.0.1:50052');
+server.bind('127.0.0.1:7344', grpc.ServerCredentials.createInsecure());
+console.log('LED Crosswalk Server running at http://127.0.0.1:7344');
 server.start();

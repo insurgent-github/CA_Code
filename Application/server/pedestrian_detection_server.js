@@ -24,7 +24,7 @@ class PedestrianDetectionServiceImpl
 
 server.addService(PedestrianDetectionService, new PedestrianDetectionServiceImpl());
 
-server.bind('127.0.0.1:50051', grpc.ServerCredentials.createInsecure());
-console.log('Server running at http://127.0.0.1:50051');
+server.bind('127.0.0.1:7343', grpc.ServerCredentials.createInsecure());
+console.log('Server running at http://127.0.0.1:7343');
 server.start();
 

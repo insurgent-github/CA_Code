@@ -26,6 +26,6 @@ class CrosswalkMonitoringServiceImpl
 
 server.addService(CrosswalkMonitoringService, new CrosswalkMonitoringServiceImpl());
 
-server.bind('127.0.0.1:50052', grpc.ServerCredentials.createInsecure());
-console.log('Monitoring server running at http://127.0.0.1:50052');
+server.bind('127.0.0.1:7345', grpc.ServerCredentials.createInsecure());
+console.log('Monitoring server running at http://127.0.0.1:7345');
 server.start();
