@@ -5,6 +5,14 @@ Date: 30th December, 2023
 Purpose: Distribution's Systems CA for National College Of Ireland
 */
 
+//We are going to import the Services that we have implemented. 
+// The name of the class, like MonitoringServiceClient is the client class that is generated from my protobuf definition for the monitoring service.
+// We can choose any name! because they connect to the javascript file (this one) through the https address :)
+// The address that we put here and the address and port of the gRPC server have to match of course.
+const pedestrianDetectionService = new pedestrianDetectionServiceClient ("https://localhost:7343");
+const ledCrossWalkService = new LEDCrosswalkServiceClient ("https://localhost:7344");
+const monitoringService = new MonitoringServiceClient ("https://localhost:7345");
+
 class Crosswalk 
 {
     constructor() 
@@ -16,6 +24,10 @@ class Crosswalk
             attribution: '© OpenStreetMap contributors'
         }).addTo(this.map);
         this.markers = L.layerGroup().addTo(this.map); // Layer group to manage markers
+
+        //We are going to implement an object to store the logs of each Crosswalk.
+        //The object is an array as we don't need anything else.
+        this.logs = [];
 
         // Initialize the map with the default crosswalk state
         this.initializeMap();
@@ -90,6 +102,30 @@ class Crosswalk
         }
     }
 
+    // Function to add a log entry
+    addLog (crosswalkId, logMessage)
+    {
+        const logEntry = `Crosswalk ID: ${crosswalkId}, Log: ${logMessage}`;
+        this.logs.push (logEntry);
+    }
+
+    //Function to display the logs.
+    displayLogs()
+    {
+        const logsElement = document.getElementById ('logsResult');
+
+        //We are going to clear previous logs (not sure if this is something that I might want to implement actually.)
+        logsElement.innerText = '';
+
+        //Display each log entry.
+        this.logs.forEach (log => 
+        {   
+            const logEntry = document.createElement ('p');
+            logEntry.innerText = log;
+            logsElement.appendChild (logEntry);
+        });
+    }
+
     // Function to remove all markers from the map
     removeMarkers() 
     {
@@ -102,6 +138,8 @@ class Crosswalk
         });
     }
 }
+
+
 
 const crosswalk = new Crosswalk();
 
@@ -168,6 +206,12 @@ document.getElementById('showCrosswalkButton').addEventListener('click', functio
 {
     var crosswalkId = document.getElementById('crosswalkId').value;
     showCrosswalkOnMap(crosswalkId);
+});
+
+// Event listener for the "Access Logs and History" button
+document.getElementById('accessLogsButton').addEventListener('click', function () 
+{
+  crosswalk.displayLogs();
 });
 
 

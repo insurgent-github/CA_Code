@@ -10,7 +10,7 @@ const ledCrosswalkProto = grpc.load('protos/led_crosswalk.proto');
 const ledCrosswalkService = ledCrosswalkProto.led_crosswalk.LEDCrosswalkService;
 
 // Create a gRPC client
-const client = new ledCrosswalkService('localhost:50052', grpc.credentials.createInsecure());
+const client = new ledCrosswalkService('localhost:7344', grpc.credentials.createInsecure());
 
 // Function to make a request to activate LED lights
 function activateLEDLights(crosswalkId, pedestrianPresence) 
@@ -60,4 +60,4 @@ function deactivateLEDLights (crosswalkId, pedestrianPresence)
 activateLEDLights('0001', true);
 
 // Call the function to deactivate the LED panel.
-deactivateLEDLights('0001', false)
+deactivateLEDLights('0001', false);

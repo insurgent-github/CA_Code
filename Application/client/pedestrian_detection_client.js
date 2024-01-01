@@ -10,7 +10,7 @@ const pedestrianDetectionProto = grpc.load('protos/pedestrian_detection.proto');
 const pedestrianDetectionService = pedestrianDetectionProto.pedestrian_detection.PedestrianDetectionService;
 
 // Create a gRPC client
-const client = new pedestrianDetectionService('localhost:50051', grpc.credentials.createInsecure());
+const client = new pedestrianDetectionService('localhost:7343', grpc.credentials.createInsecure());
 
 // Function to make a request to detect pedestrians
 function detectPedestrian() 

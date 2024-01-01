@@ -10,7 +10,7 @@ const grpc = require('grpc');
 const crosswalkMonitoringProto = grpc.load('protos/crosswalk_monitoring.proto');
 const crosswalkMonitoringService = crosswalkMonitoringProto.CrosswalkMonitoringService;
 
-const client = new crosswalkMonitoringService('localhost:50052', grpc.credentials.createInsecure());
+const client = new crosswalkMonitoringService('localhost:7345', grpc.credentials.createInsecure());
 
 function getCrosswalkStatus(crosswalkId) 
 {
@@ -33,4 +33,4 @@ function getCrosswalkStatus(crosswalkId)
 }
 
 // Call the function to get crosswalk status
-getCrosswalkStatus(/* provide the crosswalkId */);
+getCrosswalkStatus(/* We have to provide the crosswalkId here*/);

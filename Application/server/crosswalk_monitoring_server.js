@@ -17,9 +17,9 @@ class CrosswalkMonitoringServiceImpl
   {
     // Implement logic to retrieve crosswalk status, error logs, and activation logs
     const response = new CrosswalkStatusResponse();
-    response.setStatus(/* logic to determine status */);
-    response.setErrorLogsList(/* array of error logs */);
-    response.setActivationLogsList(/* array of activation logs */);
+    response.setStatus(/* Write the logic to determine the status */);
+    response.setErrorLogsList(/* This is an array of error logs */);
+    response.setActivationLogsList(/* And this is an array of activation logs */);
     callback(null, response);
   }
 }
