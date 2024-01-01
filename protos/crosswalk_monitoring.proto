@@ -1,0 +1,27 @@
+/*
+Title: crosswalk_monitoring.proto
+Author: Miguel Angel Vinas
+Date: 1st January, 2024
+Purpose: Distribution's Systems CA for National College Of Ireland
+*/
+
+syntax = "proto3";
+
+package crosswalk_monitoring;
+
+service CrosswalkMonitoringService 
+{
+  rpc getCrosswalkStatus(CrosswalkStatusRequest) returns (CrosswalkStatusResponse);
+}
+
+message CrosswalkStatusRequest 
+{
+  string crosswalkId = 1;
+}
+
+message CrosswalkStatusResponse 
+{
+  string status = 1;
+  repeated string errorLogs = 2;
+  repeated string activationLogs = 3;
+}

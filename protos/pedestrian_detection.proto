@@ -1,0 +1,23 @@
+/*
+Title: pedestrian_detection.proto
+Author: Miguel Angel Vinas
+Date: 1st January, 2024
+Purpose: Distribution's Systems CA for National College Of Ireland
+*/
+
+syntax = "proto3";
+
+package pedestrian_detection;
+
+service PedestrianDetectionService 
+{
+  rpc DetectPedestrian(DetectPedestrianRequest) returns (DetectPedestrianResponse);
+}
+
+message DetectPedestrianRequest {}
+
+message DetectPedestrianResponse 
+{
+  bool presence = 1;
+}
+

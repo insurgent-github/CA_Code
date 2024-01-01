@@ -1,0 +1,38 @@
+/*
+Title: led_crosswalk.proto
+Author: Miguel Angel Vinas
+Date: 1st January, 2024
+Purpose: Distribution's Systems CA for National College Of Ireland
+*/
+
+syntax = "proto3";
+
+package led_crosswalk;
+
+service LEDCrosswalkService 
+{
+  rpc ActivateLEDLights(ActivateLEDLightsRequest) returns (ActivateLEDLightsResponse);
+  rpc DeactivateLEDLights(DeactivateLEDLightsRequest) returns (DeactivateLEDLightsResponse); 
+}
+
+message ActivateLEDLightsRequest 
+{
+  string crosswalkId = 1;
+  bool pedestrianPresence = 2;
+}
+
+message ActivateLEDLightsResponse 
+{
+  bool activationStatus = 1;
+}
+
+message DeactivateLEDLightsRequest 
+{
+  string crosswalkId = 1;
+  bool pedestrianPresence = 2;
+}
+
+message DeactivateLEDLightsResponse 
+{
+  bool deactivationStatus = 1;
+}

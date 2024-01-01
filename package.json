@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "protobufjs": "^7.2.5"
+  },
+  "name": "ca_code",
+  "description": "Github Repository for Distribution's Systems CA",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "long": "^5.2.3",
+    "undici-types": "^5.26.5"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Miguel Angel Vinas",
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server Side for CA for NCI 2023.",
+  "main": "app.js",
+  "scripts": 
+  {
+    "start": "node app.js"
+  },
+  "author": "Miguel Angel Vinas",
+  "license": "ISC"
+}
