@@ -8,6 +8,7 @@
   "main": "app.js",
   "dependencies": {
     "long": "^5.2.3",
+    "pbjs": "^0.0.14",
     "undici-types": "^5.26.5"
   },
   "scripts": {

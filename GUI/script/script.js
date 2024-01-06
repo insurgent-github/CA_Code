@@ -9,9 +9,12 @@ Purpose: Distribution's Systems CA for National College Of Ireland
 // The name of the class, like MonitoringServiceClient is the client class that is generated from my protobuf definition for the monitoring service.
 // We can choose any name! because they connect to the javascript file (this one) through the https address :)
 // The address that we put here and the address and port of the gRPC server have to match of course.
+
+/* 
 const pedestrianDetectionService = new pedestrianDetectionServiceClient ("https://localhost:7343");
 const ledCrossWalkService = new LEDCrosswalkServiceClient ("https://localhost:7344");
 const monitoringService = new MonitoringServiceClient ("https://localhost:7345");
+*/
 
 class Crosswalk 
 {
