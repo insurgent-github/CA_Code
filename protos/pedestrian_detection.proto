@@ -5,15 +5,19 @@ Date: 1st January, 2024
 Purpose: Distribution's Systems CA for National College Of Ireland
 */
 
+// We are defining the syntax (proto3 version) of the protocol buffer file
 syntax = "proto3";
 
+// We are declaring the package for the led_crosswalk service
 package pedestrian_detection;
 
+//And we are defining the PedestrianDetectionService, which contains the RPC method
 service PedestrianDetectionService 
 {
   rpc DetectPedestrian(DetectPedestrianRequest) returns (DetectPedestrianResponse);
 }
 
+// We are defining the messages for the different requests
 message DetectPedestrianRequest {}
 
 message DetectPedestrianResponse 

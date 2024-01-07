@@ -11,15 +11,20 @@ Purpose: Distribution's Systems CA for National College Of Ireland
 <html lang="en">
 
     <head>
+        <!-- START - This is the START of the Meta tags for character sets and for the viewport -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- END - This is the END of the Meta tags for character sets and for the viewport -->
+        
+        <!-- START - This is the START to the link of my CSS stylesheet -->
         <link rel="stylesheet" href="css/style.css">
+        <!-- END - This is the END to the link of my CSS stylesheet -->
         
         <!--START - This is the START of  Leaflet API integration for the MAP where the Zebra Crosswalks are -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
          crossorigin=""/>
-          <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <!-- Make sure you put this AFTER Leaflet's CSS (copied from Leaflet's website) -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
          crossorigin=""></script>
@@ -31,8 +36,10 @@ Purpose: Distribution's Systems CA for National College Of Ireland
     <body>
         
         <div class="container">
+            <!-- This is the main heading of the page -->
             <h1>Smart Zebra Crosswalk System</h1>
             
+            <!--START - This is the START of the container where the user controls are -->
             <div class="controls">
                 <label for="crosswalkId">Enter Crosswalk ID:</label>
                 <input type="text" id="crosswalkId" placeholder="Enter Crosswalk Id here please.">
@@ -43,49 +50,52 @@ Purpose: Distribution's Systems CA for National College Of Ireland
                     <button onclick="manualDeactivateCrosswalk()">Deactivate Crosswalk</button>
                 </div>
             </div>
+            <!--END - This is the END of the container where the user controls are -->
 
-
+            <!--START - This is the START of the container where the status display is -->
             <div class="status">
                 <h2>LED Status</h2>
                     <p id="ledStatus" class="deactivated">Inactive</p>
             </div>
+            <!--END - This is the END of the container where the status display is -->
 
-
+            <!--START - This is the START of the container where the Logs and History are -->
             <div class="logs">
                 <h2>Logs and History</h2>
                     <button onclick="accessLogsAndHistory()">Access Logs</button>
                     <p id="logsResult"></p>
             </div>
+            <!--START - This is the START of the container where the Logs and History are -->
 
         <!--START - This is the START of  Leaflet Map where Zebra Crosswalks are -->
-                <div class="map">
-                    <h2>Zebra Crosswalk Location</h2>
-                    <div id="map" style = "height: 200px"></div>
-                </div>
+            <div class="map">
+                <h2>Zebra Crosswalk Location</h2>
+                <div id="map" style = "height: 200px"></div>
+            </div>
         <!--END - This is the END of  Leaflet Map where Zebra Crosswalks are -->
 
         </div>
 
-        <!-- START - This is the START of my gRPC service client files -->
+        <!-- START - This is the START of my gRPC service client files, which is a placeholder for the moment -->
         <script src = ""></script>
         <script src = ""></script>
         <script src = ""></script>
-         <!-- END - This is the END of my gRPC service client files -->  
+         <!-- END - This is the END of my gRPC service client files, which is a placeholder for the moment -->  
 
+        <!-- START - This is the START of my javascript file where the website's logic is -->
         <script src="script/script.js"></script>
+        <!-- END - This is the END of my javascript file where the website's logic is -->
 
-         <!-- START - This is the START of the gRPC library -->
-         <script src = "https://cdn.jsdelivr.net/npm/grpc-web@1.5.0/index.min.js"></script>
+        <!-- START - This is the START of the gRPC library -->
+        <script src = "https://cdn.jsdelivr.net/npm/grpc-web@1.5.0/index.min.js"></script>
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/grpc-web@1.2.1/dist/grpc-web.js"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/grpc-web@1.2.1/dist/grpc-web.js"></script> this script made the page not work as intended and the console was saying that it couldn't find it -->
         
         <!-- END - This is the END of the gRPC library -->
 
         <!--START - This is the START of the Leaflet script where Zebra Crosswalks are -->
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <!--END - This is the END of the Leaflet script where Zebra Crosswalks are -->
-
-       
 
     </body>
 </html>

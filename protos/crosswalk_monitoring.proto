@@ -5,20 +5,26 @@ Date: 1st January, 2024
 Purpose: Distribution's Systems CA for National College Of Ireland
 */
 
+// We are defining the syntax (proto3 version) of the protocol buffer file
 syntax = "proto3";
 
+// We are declaring the package for the Crosswalk Monitoring service
 package crosswalk_monitoring;
 
+//And we are defining the CrosswalkMonitoringService, which contains the RPC method
 service CrosswalkMonitoringService 
 {
+  // This is the RPC method to get the status of the crosswalk
   rpc getCrosswalkStatus(CrosswalkStatusRequest) returns (CrosswalkStatusResponse);
 }
 
+// We are defining the message for the request to get the crosswalk status
 message CrosswalkStatusRequest 
 {
   string crosswalkId = 1;
 }
 
+// And we are defining the message for the response to get the crosswalk status
 message CrosswalkStatusResponse 
 {
   string status = 1;

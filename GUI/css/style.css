@@ -1,16 +1,19 @@
 /*
-Title: index.html
+Title: style.css
 Author: Miguel Angel Vinas
 Date: 30th December, 2023
 Purpose: Distribution's Systems CA for National College Of Ireland
 */
 
+
+/* We are defining the custom font that I chose for my website, Segoe UI, which is included in the files */
 @font-face 
 {
     font-family: 'Segoe UI';
     src: url('.../fonts/segoeui.ttf') format('ttf');
 }
 
+/* We are defining the general styling for the entire body of the website */
 body 
 {
     font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -23,6 +26,7 @@ body
     height: 100vh;
 }
 
+/* We are defining the styling for the main container of the website */
 .container 
 {
     max-width: 800px;
@@ -34,17 +38,20 @@ body
     text-align: center;
 }
 
+/* We are defining the styling for the main heading of the website */
 h1 
 {
     text-align: center;
     color: #333;
 }
 
+/* We are defining the styling for the controls section of the website */
 .controls 
 {
     margin-bottom: 20px;
 }
 
+/* We are defining the styling for the LABELS in the controls section of the website */
 .controls label 
 {
     display: block;
@@ -52,6 +59,7 @@ h1
     color: #333;
 }
 
+/* We are defining the styling for the INPUT in the controls section of the website */
 .controls input 
 {
     width: 100%;
@@ -60,6 +68,7 @@ h1
     box-sizing: border-box;
 }
 
+/* We are defining the styling for the button container in the controls section of the website */
 .button-container 
 {
     display: flex;
@@ -67,6 +76,7 @@ h1
     justify-content: center;
 }
 
+/* We are defining the styling for the Buttons of the website */
 button 
 {
     background-color: #4caf50;
@@ -76,16 +86,19 @@ button
     cursor: pointer;
 }
 
+/* We are defining the HOVER effect for the buttons of the website */
 button:hover 
 {
     background-color: #45a049;
 }
 
+/* We are defining the styling for the BUTTONS within the button container of the website */
 .button-container button 
 {
     flex: 1;
 }
 
+/* We are defining the styling for the Activated Status */
 .activated 
 {
     background-color: #4caf50;
@@ -95,6 +108,7 @@ button:hover
     border-radius: 4px;
 }
 
+/* We are defining the styling for the Deactivated Status */
 .deactivated 
 {
     background-color: #f44336;
@@ -104,21 +118,25 @@ button:hover
     border-radius: 4px;
 }
 
+/* We are defining the styling for the Status and the Logs section of the website */
 .status, .logs 
 {
     margin-top: 20px;
 }
 
+/* We are defining the styling for the Subheadings of the website */
 h2 
 {
     color: #333;
 }
 
+/* We are defining the styling for the buttons within the Log section of the website */
 .logs button 
 {
     margin-top: 10px;
 }
 
+/* We are defining the styling for the paragraphs within the Log section of the website */
 .logs p 
 {
     margin-top: 10px;
